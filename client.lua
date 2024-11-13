@@ -1,3 +1,12 @@
+
+--[[local job = ThomasGetExportJob()
+if job == "Sheriff" or job == "StatePolice" or job == "HighwayPatrol" then
+    maxSpeedMph = 135
+else
+    maxSpeedMph = 129
+end
+maxSpeedMps = maxSpeedMph / 2.236936]]  -- Here is the logic i used within the loop to allow on duty leo in my server to be able to go slightly faster than civilians.
+
 Citizen.CreateThread(function()
     local lastVehicle = nil
     local speedLimitApplied = false
